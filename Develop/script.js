@@ -11,7 +11,7 @@ var numUpCase;
 var numSpChar;
 
 //arrays//
-const numLowCase = []
+const numLowCase
 const lowerCase = Array.from(lowerCase);
 const upperCase = Array.from(upperCase);
 const spChar = [" ", "!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<",">", "=", "?", "@", "]", "[", "^", "_", "`", "{", "}", "|", "~"];
@@ -54,28 +54,31 @@ const spChar = [" ", "!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-",
     } else { genRanSpChar();}
   }
 
-function genAllChar() {
+// function genAllChar() {
 
-}
+// }
 
-function genLowSp() {}
+// function genLowSp() {}
 
-function genUpSp() {}
+// function genUpSp() {}
 
-function genLowUp() {}
+// function genLowUp() {}
 
 function genRanLowCase() {
-  numLowCase = numChoice
+  numLowCase = [];
   
-for ()
-
-  chosenLowCase = lowerCase[Math.floor(Math.random() * lowerCase.length)];
-        // Math.floor(Math.random() * numChoice)
+  for (var i = 0; i < numChoice; i++) {
+    numLowCase.push(lowerCase[Math.floor(Math.random() * lowerCase.length)]);
+    console.log(numLowCase);
 }
 
-function genRanUpCase() {}
+//   chosenLowCase = lowerCase[Math.floor(Math.random() * lowerCase.length)];
+//         // Math.floor(Math.random() * numChoice)
+// }
 
-function genRanSpChar() {}
+// function genRanUpCase() {}
+
+// function genRanSpChar() {}
 
 // console.log(numChoice);
 
