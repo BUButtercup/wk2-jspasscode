@@ -1,13 +1,8 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-generateBtn.addEventListener("click", function(){
-  if (newPass) {
-    writePassword();
-  } else {
-    alert("Well, bye then!")
-}
-});
-var newPass = confirm("Do you need a new password?");
+
+
+// var newPass = confirm("Do you need a new password?");
 var lowerCase1 = "abcdefghijklmnopqrstuvwxyz";
 var upperCase1 = lowerCase1.toUpperCase();
 var numChoice;
@@ -20,36 +15,35 @@ var reducer = (previousValue, currentValue) => parseInt(previousValue) + parseIn
 
 
 //arrays//
-const numChoiceHold = []
+var numChoiceHold = []
 var numLowCase = []
 var numUpCase = []
 var numSpChar = []
 var sumChar = []
-const passInput = [];
+var passInput = [];
 const lowerCase = Array.from(lowerCase1);
 const upperCase = Array.from(upperCase1);
 const spChar = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<",">", "=", "?", "@", "]", "[", "^", "_", "`", "{", "}", "|", "~"];
 const finPass = [];
 
-//   if (newPass) {
-//     writePassword();
-//   } else {
-//     alert("Well, bye then!")
-// }
+generateBtn.addEventListener("click", writePassword)
 
   function writePassword() {
     numChoiceHold
-    numChoice = parseInt(prompt("So you want a new passord...how long should it be? \nChoose a number between 8 and 128:", ""), 10);
-    if (numChoice >= 8 && numChoice <= 128) {
+    var newPass = confirm("Do you need a new password?")
+    if (newPass) {
+      numChoice = parseInt(prompt("So you want a new passord...how long should it be? \nChoose a number between 8 and 128:", ""), 10);
+      if (numChoice >= 8 && numChoice <= 128) {
         console.log(numChoice + 2);
         numChoiceHold.push(numChoice);
         console.log(numChoiceHold);
         generatePassword();
-    } else {
+      } else {
       console.log(numChoice)
       confirm("You should read ALL of the instructions. Try again.");
       writePassword();
-    }
+      }
+    } else{alert("Well, bye then!")}
   }
 
   function generatePassword() {
@@ -235,17 +229,26 @@ function randomizePassword() {
   while (passInput.length) { 
     finPass.push(passInput.splice(passInput.length * Math.random() | 0, 1)[0])
   }
+  console.log(finPass);
+  putInBox()
 }
 //I did adapt this while loop idea from here: https://stackoverflow.com/questions/36069870/how-to-remove-random-item-from-array-and-then-remove-it-from-array-until-array-i//
 
-console.log(finPass);
+function putInBox() {
+  finPass
+  var password = finPass.toString();
+  document.querySelector("#password").value = password;
+}
+
+
+
 
 
 // Write password to the #password input
 
 // var password = finPass.toString();
-// var passwordText = document.querySelector("#password");
-// passwordText.value = password;
+// var passwordText = 
 
+// passwordText.value = password;
 
 
