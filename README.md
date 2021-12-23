@@ -1,15 +1,11 @@
 # wk2-jspasscode
 
-In this repos we will be creating a simple javascript password generator. The TML and CSS are pre-built.
+In this repos we will be creating a simple javascript password generator. The HTML and CSS are pre-built.
 
+This project was quite challenging for me. I suppose it is challenging any time you're asked to write a paper in a foreign language for the first time. It helped me to understand how the language talks to itself: I still don't think I totally get it, but it works, darn it. I didn't try to use anything more complicated than functions, a loop or two, and some conditional statements this time, but there's always the next one.
 
-//TODO: event listener onClick > write password fxn
-// TODO: choose # of characters: 8-128; > 1 if else
-// EDGE: if they choose <8 or >128 >> alert() and start again
-// TODO: lowercase? if else if statement with Math.floor and Math.random (need to assign number of lowercase to choose, then random lowercase in that number)
-// TODO: UPPERCASE? if else if statement with Math.floor and Math.random (need to assign number of UPPERCASE to choose, then random UPPERCASE in that number)
-// TODO: special characters? if else if statement with Math.floor and Math.random (need to assign number of spch to choose, then random spch in that number)
-// TODO: combine and randomize the selected values, then return the password to the user
+Link to final page:
 
-//alert("So you want to make a password... How many characters should it be?");
-//" !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~""
+Screenshot:
+
+<img width="1126" alt="Screen Shot 2021-12-23 at 1 27 46 PM" src="https://user-images.githubusercontent.com/95940864/147292882-13488d9c-c535-413d-a31c-ab096d2fb3db.png">
