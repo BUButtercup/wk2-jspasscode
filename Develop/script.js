@@ -1,8 +1,8 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 var newPass = confirm("Do you need a new password?");
-var lowerCase = "abcdefghijklmnopqrstuvwxyz";
-var upperCase = lowerCase.toUpperCase();
+var lowerCase1 = "abcdefghijklmnopqrstuvwxyz";
+var upperCase1 = lowerCase1.toUpperCase();
 var numChoice;
 var lowCaseYes;
 var upCaseYes;
@@ -11,9 +11,9 @@ var numUpCase;
 var numSpChar;
 
 //arrays//
-const numLowCase
-const lowerCase = Array.from(lowerCase);
-const upperCase = Array.from(upperCase);
+const passInput = [];
+const lowerCase = Array.from(lowerCase1);
+const upperCase = Array.from(upperCase1);
 const spChar = [" ", "!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<",">", "=", "?", "@", "]", "[", "^", "_", "`", "{", "}", "|", "~"];
 
   if (newPass) {
@@ -54,9 +54,11 @@ const spChar = [" ", "!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-",
     } else { genRanSpChar();}
   }
 
-// function genAllChar() {
-
-// }
+function genAllChar() {
+  genRanLowCase();
+  genRanUpCase();
+  genRanSpChar();
+}//flow confirmed! just need to make cases for multiple character choices now.
 
 // function genLowSp() {}
 
@@ -65,21 +67,33 @@ const spChar = [" ", "!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-",
 // function genLowUp() {}
 
 function genRanLowCase() {
-  numLowCase = [];
-  
+  passInput
   for (var i = 0; i < numChoice; i++) {
-    numLowCase.push(lowerCase[Math.floor(Math.random() * lowerCase.length)]);
-    console.log(numLowCase);
+    passInput.push(lowerCase[Math.floor(Math.random() * lowerCase.length)]);
 }
+}
+
 
 //   chosenLowCase = lowerCase[Math.floor(Math.random() * lowerCase.length)];
 //         // Math.floor(Math.random() * numChoice)
 // }
 
-// function genRanUpCase() {}
+function genRanUpCase() {
+  passInput
+  for (var i = 0; i < numChoice; i++) {
+    passInput.push(upperCase[Math.floor(Math.random() * upperCase.length)]);
+}
+}
 
-// function genRanSpChar() {}
 
+function genRanSpChar() {
+  passInput
+  for (var i = 0; i < numChoice; i++) {
+    passInput.push(spChar[Math.floor(Math.random() * spChar.length)]);
+  }
+}
+
+console.log(passInput);
 // console.log(numChoice);
 
 
